@@ -14,24 +14,19 @@ public class MainActivity extends AppCompatActivity {
     private Button button1;
     private Button button2;
     private Button button3;
-
     SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     String dateString = format.format( new Date());
     DBManager db = new DBManager(this);
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         addListenerOnButton();
     }
-
     public void addListenerOnButton () {
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
-
         button1.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -41,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
-
         button2.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -51,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
-
         button3.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -61,7 +54,5 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
-
     }
-
 }
